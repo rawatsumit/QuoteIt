@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Chakra+Petch:wght@600&family=Cuprum:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+  <title>Happiness | Quote it</title>
+  <style>
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#replitBadge {
+  display: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu {
+transition:0.5s;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.top {
+animation-name:slide7;
+ animation-duration:2.5s;
+ animation-iteration-count:1;
+transition:0.5s;
+  position: sticky;
+  margin: 0;
+  padding: 5px;
+}
+
+.top-heading {
+transition:0.5s;
+  font-weight: bold;
+  margin-left: 30px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 35px;
+  color: #15174c;
+}
+
+.top-menu ul {
+ transition:0.5s;
+  width: 40%;
+  display: flex;
+  margin-right: 50px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.top-menu ul li a {
+transition:0.5s;
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #15174c;
+}
+.top-menu ul li a:hover {
+  color: grey;
+}
+.special{
+width:65%;
+text-decoration:none;
+margin-left:17%;
+background:transparent;
+}
+.top-menu button a {
+transition:0.5s;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+}
+
+.symbol button a {
+transition:0.5s;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+}
+
+.symbol {
+transition:0.5s;
+  background: transparent;
+  width: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  top: 37px;
+}
+
+.symbol i {
+  display:none;
+  background: transparent;
+  font-size: 30px;
+  color: #bedb74;
+}
+
+.symbol button {
+  text-decoration: none;
+  margin-right: 45px;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #bedb74;
+  color: Black;
+  border: none;
+  border-radius: 25px;
+}
+
+.symbol button:hover {
+  background: #bedb747d;
+  transition: 0.2s;
+}
+
+.top-menu a button {
+transition:0.5s;
+  display: none;
+  text-decoration: none;
+  margin-right: 45px;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #bedb74;
+  color: Black;
+  border: none;
+  border-radius: 25px;
+}
+
+.top-menu button:hover {
+
+  background: #bedb747d;
+  transition: 0.2s;
+}
+
+.cross {
+  display: none;
+}
+
+footer {
+  margin-top: 100px;
+  background: black;
+  color: white;
+}
+
+footer h2 {
+  text-align: center;
+  background: transparent;
+  font-size: 35px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+@media(max-width:1250px) {
+  .top-menu ul {
+    width: 50%;
+  }
+}
+
+@media(max-width:1150px) {
+  .data {
+    width: 400px;
+  }
+
+  .top-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .top {
+    background: #f9f9f9;
+    color: white;
+  }
+
+  .top-heading {
+    font-size: 45px;
+    background: transparent;
+    color: #15174c;
+  }
+
+  .top-menu {
+    background: #f9f9f9;
+  }
+
+  .top-menu ul {
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+  .top-menu ul li {
+
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: black;
+  }
+
+  .cross {
+    font-size: 27px;
+    position: absolute;
+    color: #bedb74;
+    position: abolute;
+    top: 35px;
+    right: 5%;
+    background: black;
+  }
+
+  .cross i {
+    background: black;
+  }
+
+
+
+  .top-menu button {
+    width: 65%;
+    margin-left: 17%;
+    margin-bottom: 25px;
+    display: none;
+  }
+
+  .top-menu ul li a {
+    color: white;
+    font-size: 28px;
+    background: black;
+    line-height: 30px;
+  }
+
+  .symbol {
+    width: 29%;
+    right: 5%;
+  }
+
+  .symbol i {
+    display: block;
+  }
+
+  .symbol button {
+    display: block;
+  }
+}
+
+@media(max-width:950px) {
+  .data {
+    width: 400px;
+  }
+}
+
+@media(max-width:650px) {
+  .cont-1 img {
+    width: 100%;
+  }
+
+  .randoms buttons {
+    font-size: 20px;
+  }
+
+  .welcome p {
+    width: 85%;
+  }
+
+  .cont-2 img {
+    width: 100%;
+  }
+}
+
+@media(max-width:550px) {
+  .top-menu ul li a {
+    font-size: 15px;
+
+  }
+
+  .symbol {
+    width: 15%;
+  }
+
+  .symbol button {
+    display: none;
+  }
+
+
+  .welcome h2 {
+    font-size: 40px;
+  }
+
+  .welcome img {
+    width: 18%;
+  }
+
+
+}
+
+.container {
+animation-name:slide8;
+  animation-iteration-count:1;
+  animation-duration:1s;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-size: cover;
+  height: 40vh;
+  padding: 0px;
+  background: linear-gradient(to right, #817474ad, #817474ad), url(https://images.unsplash.com/photo-1462216589242-9e3e00a47a48?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8MTY5ODE0MDU0Ng&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1400);
+  }
+.container h2 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  background: transparent;
+
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.quotess {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quotess button {
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  padding: 5px;
+  font-size: 20px;
+  color: white;
+  width: 320px;
+  margin: 10px;
+  height: 180px;
+  background: linear-gradient(45deg, #741cb7, #af26264f);
+  border: none;
+  border-radius: 8px;
+
+}
+
+.quotess button i {
+background:transparent ;
+  color:#2b299d;
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+ 
+  font-size: 28px;
+}
+
+.quotess button i:hover {
+  color: #2b299d57;
+  transition: 0.2s;
+
+}
+@keyframes slide8{
+from {margin-top:-50vh;}
+to {margin-top:50px;}
+}
+h3{
+font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+text-align:center;
+font-size:45px;
+color:#15174c;
+padding:10px;
+margin-top:55px;
+}
+.oth{
+margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+}
+.oth1:hover{
+transition:0.5s;
+filter:brightness(0.8);
+}
+.oth a{
+font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+background:transparent;
+font-size:25px;
+text-decoration:none;
+
+text-align:center;
+color:white;
+}
+.oth1{
+font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+background:transparent;
+font-size:25px;
+color:white;
+text-align:center;
+width:280px;
+margin:20px;
+padding:10px 15px;
+background:linear-gradient(45deg, #815b5b, #c0cb1685);
+border:2px solid #c0cb1685;
+border-radius:8px;
+}
+.oth1 img{
+border-radius:10px;
+width:90%;
+margn:10%;
+}
+  </style>
+</head>
+
+<body>
+  <section class='top' id='top'>
+    <div class='top-menu' id='cls-menu'>
+      <ul id='ul'>
+        <h1 class='top-heading' id='head'>Quote it</h1>
+
+        <li id='test1'><a href='home.html'>Home</a></li>
+        <li id='test2'><a href='create.html'>Create</a></li>
+        <li id='test3'><a href='about.html'>Developer</a></li>
+        <li id='test4'><a href='others.html'>Others</a></li>
+      </ul>
+     <a class='special' href='mailto:mailtosumitrawat13@gmail.com'> <button id='test5'>Mail us</button></a>
+
+    </div>
+    <div id='symbol' class='symbol'>
+      <button><a href='mailto:mailtosumitrawat13@gmail.com'>Mail us</a></li></button>
+      <i class="fa-solid fa-bars" onclick='openMenu()'></i>
+
+    </div>
+    <span class='cross' id='cross'><i class="fa-solid fa-circle-xmark" onclick='closeMenu()'></i></span>
+  </section>
+
+  <section class='container'>
+    <h2>Nature (Quotes) </h2>
+  </section>
+
+  <section class='quotess'>
+
+    <button id='1'>Nature holds the key to our aesthetic, intellectual, cognitive and even spiritual satisfaction.<i
+        onclick='copy1()' class="fa-regular fa-copy"></i></button>
+    <button id='2'>The earth has music for those who listen.<i onclick='copy2()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='3'>Every flower is a soul blossoming in nature.<i onclick='copy3()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='4'>Nature is full of infinite causes that have never occurred in experience.<i onclick='copy4()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='5'>Law is born from despair of human nature.<i onclick='copy5()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='6'>Solitary trees, if they grow at all, grow strong.<i onclick='copy6()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='7'>Human nature is evil, and goodness is caused by intentional activity.<i onclick='copy7()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='8'>If we kill off the wild then we are killing a part of our souls.<i onclick='copy8()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='9'>It is human nature to think wisely and act in an absurd fashion.<i onclick='copy9()'
+        class="fa-regular fa-copy"></i></button>
+    <button id='10'>For greed all nature is too little.<i onclick='copy10()' class="fa-regular fa-copy"></i></button>
+    <button id='11'>The human spirit needs places where nature has not been rearranged by the hand of man.<i
+        onclick='copy11()' class="fa-regular fa-copy"></i></button>
+    <button id='12'>Self-preservation is the first law of nature.<i onclick='copy12()'
+        class="fa-regular fa-copy"></i></button>
+
+  </section>
+<h3>Explore more Quotes</h3>
+<section class='oth'>
+
+
+<div class='oth1'>
+<a href='happy.html'>
+<img src='https://us.123rf.com/450wm/loft39studio/loft39studio2309/loft39studio230980075/213649950-flying-to-the-sun-happy-young-woman-holding-colorful-balloons-and-flying-over-a-green-meadow.jpg?ver=6'>
+Happiness
+</a>
+</div>
+
+<div class='oth1'>
+<a href='alone.html'><img src='https://i2.wp.com/www.differencebetween.com/wp-content/uploads/2011/05/Alone_Difference-Between-Alone-and-Lonely.jpg'></a>
+Alone
+</div>
+
+</section>
+  <footer>
+    <h2>Quote it</h2>
+    <hr><br>
+  </footer>
+
+  <script>
+
+function openMenu() {
+  document.getElementById('symbol').style.display = 'none';
+  document.getElementById('top').style.background = 'black';
+  document.getElementById('cls-menu').style.background = 'black';
+  document.getElementById('ul').style.background = 'black';
+  document.getElementById('head').style.background = 'black';
+  document.getElementById('head').style.color = 'wheat';
+  document.getElementById('test1').style.display = 'block';
+  document.getElementById('test2').style.display = 'block';
+  document.getElementById('test3').style.display = 'block';
+  document.getElementById('test4').style.display = 'block';
+  document.getElementById('test5').style.display = 'block';
+  document.getElementById('cross').style.display = 'block';
+}
+function closeMenu() {
+  document.getElementById('symbol').style.display = 'flex';
+  document.getElementById('top').style.background = '#f9f9f9';
+  document.getElementById('cls-menu').style.background = '#f9f9f9';
+  document.getElementById('ul').style.background = '#f9f9f9';
+  document.getElementById('head').style.background = '#f9f9f9';
+  document.getElementById('head').style.color = '#15174c';
+  document.getElementById('test1').style.display = 'none';
+  document.getElementById('test2').style.display = 'none';
+  document.getElementById('test3').style.display = 'none';
+  document.getElementById('test4').style.display = 'none';
+  document.getElementById('test5').style.display = 'none';
+  document.getElementById('cross').style.display = 'none';
+}
+
+function copy1() {
+  let copy = document.getElementById('1');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy2() {
+  let copy = document.getElementById('2');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy3() {
+  let copy = document.getElementById('3');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy4() {
+  let copy = document.getElementById('4');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy5() {
+  let copy = document.getElementById('5');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy6() {
+  let copy = document.getElementById('6');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy7() {
+  let copy = document.getElementById('7');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy8() {
+  let copy = document.getElementById('8');
+  navigator.clipboard.writeText(copy.textContent);
+}
+function copy9() {
+  let copy = document.getElementById('9');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy10() {
+  let copy = document.getElementById('10');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy11() {
+  let copy = document.getElementById('11');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+function copy12() {
+  let copy = document.getElementById('12');
+  copy.querySelector('i').style.color = 'white';
+  navigator.clipboard.writeText(copy.textContent);
+   copy.querySelector('i').style.color = 'grey';
+}
+  </script>
+</body>
+
+</html>

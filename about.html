@@ -1,0 +1,1044 @@
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Chakra+Petch:wght@600&family=Cuprum:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+  <title>Developer | Quote it</title>
+  <style>
+  #replitBadge {
+  display: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top {
+animation-name:slide4;
+ animation-duration:1s;
+ animation-iteration-count:1;
+  margin-bottom: 50px;
+  position: sticky;
+  padding: 5px;
+}
+
+.top-heading {
+  font-weight: bold;
+  margin-left: 30px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 35px;
+  color: #15174c;
+}
+
+.top-menu ul {
+  transition: 0.0 ease;
+  width: 40%;
+  display: flex;
+  margin-right: 50px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.top-menu ul li a {
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #15174c;
+}
+
+.top-menu ul li a:hover {
+  color: grey;
+}
+
+.top-menu button a {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+}
+
+.symbol button a {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+}
+
+.symbol {
+  background: transparent;
+  width: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  top: 37px;
+}
+
+.symbol i {
+  display: none;
+  background: transparent;
+  font-size: 30px;
+  color: #bedb74;
+}
+
+.symbol button {
+  text-decoration: none;
+  margin-right: 45px;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #bedb74;
+  color: Black;
+  border: none;
+  border-radius: 25px;
+}
+
+.symbol button:hover {
+  background: #bedb747d;
+  transition: 0.2s;
+}
+
+.top-menu button {
+  display: none;
+  text-decoration: none;
+  margin-right: 45px;
+  padding: 15px;
+  letter-spacing: 2px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #bedb74;
+  color: Black;
+  border: none;
+  border-radius: 25px;
+}
+
+.top-menu button:hover {
+  background: #bedb747d;
+  transition: 0.2s;
+}
+
+.cross {
+  display: none;
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #cdb0b0;
+  padding: 20px;
+}
+.choose{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.choose button{
+margin:5px;
+padding:10px;
+background:blue;
+color:white;
+border:none;
+border-radius:5px;
+}
+@media(max-width:1250px) {
+  .top-menu ul {
+    width: 50%;
+  }
+
+  .main h3 {
+    font-size: 35px;
+  }
+}
+
+@media(max-width:1150px) {
+  .data {
+    width: 400px;
+  }
+
+  .top-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .top {
+    background: #f9f9f9;
+    color: white;
+  }
+
+  .top-heading {
+    font-size: 45px;
+    background: transparent;
+    color: #15174c;
+  }
+
+  .top-menu {
+    background: #f9f9f9;
+  }
+
+  .top-menu ul {
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+  .top-menu ul li {
+
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: black;
+  }
+
+  .cross {
+    font-size: 27px;
+    position: absolute;
+    color: #bedb74;
+    position: abolute;
+    top: 35px;
+    right: 5%;
+    background: black;
+  }
+
+  .cross i {
+    background: black;
+  }
+
+
+
+  .top-menu button {
+    width: 65%;
+    margin-left: 17%;
+    margin-bottom: 25px;
+    display: none;
+  }
+
+  .top-menu ul li a {
+    color: white;
+    font-size: 28px;
+    background: black;
+    line-height: 30px;
+  }
+
+  .symbol {
+    width: 29%;
+    right: 5%;
+  }
+
+  .symbol i {
+    display: block;
+  }
+
+  .symbol button {
+    display: block;
+  }
+}
+
+@media(max-width:950px) {
+  .data {
+    width: 400px;
+  }
+}
+
+.main h3 {
+  font-size: 50px;
+  text-align: center;
+  color: #15174c;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+@media(max-width:650px) {
+  .main h3 {
+    font-size: 35px;
+    padding: 10px;
+  }
+
+  .cont-1 img {
+    width: 100%;
+  }
+
+  .randoms buttons {
+    font-size: 20px;
+  }
+
+  .welcome p {
+    width: 85%;
+  }
+
+  .cont-2 img {
+    width: 100%;
+  }
+
+  .cont {
+    background: transparent;
+  }
+}
+
+@media(max-width:550px) {
+  .top-menu ul li a {
+    font-size: 15px;
+
+  }
+
+  .symbol {
+    width: 15%;
+  }
+
+  .symbol button {
+    display: none;
+  }
+
+
+  .welcome h2 {
+    font-size: 40px;
+  }
+
+  .welcome img {
+    width: 18%;
+  }
+
+  .category h3 {
+    font-size: 30px;
+  }
+
+  .more h3 {
+    font-size: 30px;
+  }
+}
+
+
+
+.main .inp {
+  align-items: center;
+  width: 90%;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+}
+
+.main {
+  margin-bottom: 35px;
+}
+
+.main input {
+  margin-top: 20px;
+  width: 94%;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  height: 35px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-radius: 5px
+}
+
+.inp button {
+  margin: 15px;
+  width: 80px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  height: 40px;
+}
+
+.inp button:hover {
+  background: #ec7e7e;
+  transition: 0.2s;
+}
+
+
+
+
+
+.themes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+}
+
+.themes img {
+  border-radius: 5px;
+  width: 100px;
+  margin: 5px;
+  height: 150px;
+}
+
+.themes img:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.cont-left {
+  width: 800px;
+  padding: 10px;
+  width: 800px;
+  color: #15174c;
+  border-radius: 8px;
+}
+
+.cont-left h3 {
+  margin: 20px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.you h3 {
+  margin-top: 12px;
+  font-size: 35px;
+  text-align: center;
+  color: #15174c;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+
+.you-in {
+  background: url("https://images.unsplash.com/photo-1497704628914-8772bb97f450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDcxMTcwfHxlbnwwfHx8fHw%3D&w=1000&q=80");
+  "");
+  border-radius: 8px;
+
+  background-size: cover;
+  width: 270px;
+  height: 420px;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  font-size: 25px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.you {
+  padding: 10px;
+  width: 300px;
+  margin-top: 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.you h4 {
+  color: red;
+}
+
+.color button {
+  border: 1px solid;
+  border-radius: 50%;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.red {
+  color: white;
+  background: red;
+}
+
+.green {
+  background: green;
+  color: white;
+}
+
+.white {
+  background: white;
+  color: black;
+}
+
+.black {
+  background: black;
+  color: white;
+}
+
+.orange {
+  background: orange;
+  color: white;
+}
+
+.pink {
+  background: pink;
+  color: white;
+}
+
+.grey {
+  background: grey;
+  color: white;
+}
+
+.purple {
+  background: purple;
+  color: white;
+}
+
+.cyan {
+  background: cyan;
+  color: white;
+}
+
+.red {
+  background: red;
+  color: white;
+}
+
+.yellow {
+  background: yellow;
+  color: black;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.colors h4 {
+  margin: 20px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.colors button:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+
+.fonts h4 {
+  margin: 20px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.font {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.font button {
+  background: #a185cd63;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.font1 {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Rowdies', sans-serif;
+}
+
+.font2 {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Lobster', sans-serif;
+
+}
+
+.font3 {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+
+.font1 {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Lobster', cursive;
+  font-family: 'Orbitron', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Rowdies', cursive;
+  font-family: 'Rowdies', cursive;
+}
+
+.font4 {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+
+
+.bold {
+  width: 50px;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.bold button {
+  margin: 8px;
+  font-size: 15px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background: #5f5fab;
+}
+
+.bold1 {
+  font-weight: bold;
+}
+
+.bold2 {
+  font-style: italic;
+}
+
+.bold button:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.bolder {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.range {
+  display: flex;
+  font-size: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.outer-range {
+  font-size: 35px;
+  text-align: center;
+  color: #15174c;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+}
+
+.range span {
+  margin: 15px;
+}
+
+footer {
+  margin-top: 100px;
+  background: black;
+  color: white;
+}
+
+footer h2 {
+  text-align: center;
+  background: transparent;
+  font-size: 35px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.range input {
+  color: red;
+  background: white;
+}
+.contain{
+  margin:20px;
+  padding:10px;
+  }
+.contain h2{
+animation-name:slide2;
+ animation-duration:1s;
+ animation-iteration-count:1;
+color:#15174c;
+  font-size:55px;
+  text-align:center;
+  margin-top:50px;
+  margin-bottom:10px;
+  font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;}
+  
+ .photo{
+ animation-name:slide3;
+ animation-duration:1s;
+ animation-iteration-count:1;
+ margin:45px;
+ float:right;
+ justify-content:center;
+ width:400px;
+   display:flex;
+   }
+ .photo img{
+ border-radius:10px;
+ width:90%;
+ }
+ .data{
+ animation-name:slide1;
+ animation-duration:1s;
+ animation-iteration-count:1;
+ margin:45px;
+ font-family: 'Alex Brush', cursive;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+ font-size:20px;
+ color:color;
+ line-height:25px;
+ }
+ @media(max-width:800px){
+ .photo{
+ animation-name:opac;
+ transition:1s;
+ padding-top:20px;
+ width:90%;
+ margin:5%;
+ }
+ .data{
+ margin-top:15px;
+ width:80%;
+ margin:10%;
+ }
+ }
+ 
+  @media(max-width:500px){
+  .contain h2{
+  
+  font-size:45px;
+  }
+ .photo{
+ width:96%;
+ margin:2%;
+ }
+ .data{
+ margin-top:15px;
+ width:90%;
+ margin:5%;
+ }
+ }
+ 
+ @media(max-width:370px){
+  .contain h2{
+  font-size:37px;
+  }
+ .photo{
+ margin-top:25px;
+ width:98%;
+ margin:1%;
+ }
+ .data{
+ margin-top:15px;
+ width:94%;
+ margin:3%;
+ }
+ }
+ 
+ 
+@keyframes slide1{
+from {margin-left:-120%;}
+to {margin:45px;;}
+}
+
+@keyframes slide2{
+from {margin-left:-120%;}
+to {margin-top:50px;
+  margin-bottom:10px;}
+}
+
+@keyframes slide3{
+from {margin-right:120%;}
+to {margin:45px;;}
+}
+
+@keyframes slide4{
+from {margin-left:-120%;}
+to {margin-bottom:50px;;}
+}
+@keyframes opac{
+from {opacity:0;}
+to {opacity:1;}
+}
+</style>
+</head>
+
+<body id='body'>
+  <section class='top' id='top'>
+    <div class='top-menu' id='cls-menu'>
+      <ul id='ul'>
+        <h1 class='top-heading' id='head'>Quote it</h1>
+
+        <li id='test1'><a href='index.html'>Home</a></li>
+        <li id='test2'><a href='create.html'>Create</a></li>
+        <li id='test3'><a href='about.html'>Developer</a></li>
+        <li id='test4'><a href='others.html'>Others</a></li>
+      </ul>
+      <button id='test5'><a href='mailto:mailtosumitrawat13@gmail.com'>Mail us</a></li></button>
+
+    </div>
+    <div id='symbol' class='symbol'>
+      <button><a href='mailto:sumitrawat13@gmail.com'>Mail us</a></li></button>
+      <i class="fa-solid fa-bars" onclick='openMenu()'></i>
+
+    </div>
+    <span class='cross' id='cross'><i class="fa-solid fa-circle-xmark" onclick='closeMenu()'></i></span>
+  </section>
+  <section>
+    <div class='contain'>
+    <h2>Developer</h2><hr>
+	<div class='photo'>
+	  <img src='https://blog.boot.dev/img/800/anonymous-person.png.webp'>
+	</div>
+	<div class='data'>
+	 Hello, iam <span style='font-weight:bold; font-size:23px; color:black;'>Sumit Singh.</span>
+	 As a passionate web developer, I thrive on solving problems and crafting digital solutions that make a difference. I've embarked on this journey to create a website that serves the world, aiming to go beyond just lines of code to deliver meaningful experiences. <br><br>This platform is not merely a project; it's a testament to my dedication to honing my skills. Every line of code and design element here represents an opportunity for me to grow as a developer and, more importantly, to contribute positively to the online community.<br><br><br>My goal isn't just to build websites; it's to build bridges between ideas and users. I believe in the power of technology to connect, inform, and empower. Through this website, I aspire to leverage my skills to make a tangible impact, be it through intuitive interfaces, efficient functionalities, or simply providing valuable content.<br><br><br><span style='font-weight:bold; font-size:23px; line-height:29px;'>Thank you for being here. Let's build a better digital world, one line of code at a time</span>
+	</div>
+	
+   </div>
+  <footer>
+    <h2>Quote it</h2>
+    <hr><br>
+  </footer>
+
+</body>
+	<script>
+		
+function openMenu() {
+  document.getElementById('symbol').style.display = 'none';
+  document.getElementById('top').style.background = 'black';
+  document.getElementById('cls-menu').style.background = 'black';
+  document.getElementById('ul').style.background = 'black';
+  document.getElementById('head').style.background = 'black';
+  document.getElementById('head').style.color = 'wheat';
+  document.getElementById('test1').style.display = 'block';
+  document.getElementById('test2').style.display = 'block';
+  document.getElementById('test3').style.display = 'block';
+  document.getElementById('test4').style.display = 'block';
+  document.getElementById('test5').style.display = 'block';
+  document.getElementById('cross').style.display = 'block';
+}
+function closeMenu() {
+  document.getElementById('symbol').style.display = 'flex';
+  document.getElementById('top').style.background = '#f9f9f9';
+  document.getElementById('cls-menu').style.background = '#f9f9f9';
+  document.getElementById('ul').style.background = '#f9f9f9';
+  document.getElementById('head').style.background = '#f9f9f9';
+  document.getElementById('head').style.color = '#15174c';
+  document.getElementById('test1').style.display = 'none';
+  document.getElementById('test2').style.display = 'none';
+  document.getElementById('test3').style.display = 'none';
+  document.getElementById('test4').style.display = 'none';
+  document.getElementById('test5').style.display = 'none';
+  document.getElementById('cross').style.display = 'none';
+}
+
+function one() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1497704628914-8772bb97f450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDcxMTcwfHxlbnwwfHx8fHw%3D&w=1000&q=80)';
+}
+function two() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1523233233-a7d7229c7fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTN8MTk3NzMwMnx8ZW58MHx8fHx8&w=1000&q=80)';
+}
+function three() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://i.pinimg.com/originals/81/34/59/813459050822af2d5c36fc3864e39530.png)';
+}
+function four() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVvdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&w=1000&q=80)';
+}
+function five() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1490237251747-4557595144b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMDcxMTcwfHxlbnwwfHx8fHw%3D&w=1000&q=80)';
+}
+function six() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://i.ytimg.com/vi/bDEmNtL91CU/frame0.jpg)';
+}
+function seven() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://img.freepik.com/free-photo/scenic-sunrise-high-mountains-alpes-generative-ai_191095-494.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696896000&semt=ais)';
+}
+function eight() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://i.pinimg.com/1200x/2b/d1/8e/2bd18e0b2c2b66f8821c716c2febbd2d.jpg)';
+}
+function nine() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://png.pngtree.com/thumb_back/fh260/background/20210510/pngtree-pastel-color-quote-background-image_713437.jpg)';
+}
+function ten() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://i.pinimg.com/736x/e8/8b/50/e88b50b6a4d3dec3caae832a6d9f60e3.jpg)';
+}
+function eleven() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1601224748193-d24f166b5c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9jayUyMGNsaW1iaW5nfGVufDB8fDB8fHww&w=1000&q=80)';
+}
+function twelve() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://images.unsplash.com/photo-1535615615570-3b839f4359be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFsbGluZyUyMGluJTIwbG92ZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80)';
+}
+function thirteen() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPdfeRfx3R-1ThsVOkN6GcMmICncYB3F7gBOfbSxprAUMUMHaKNgIbP5cFWMZvzCEEPME&usqp=CAU)';
+}
+function fourteen() {
+  document.getElementById("yours").style.backgroundImage = 'url(https://i.pinimg.com/236x/2a/18/82/2a18824ac47ab96f4ae6fb5cef85a99c.jpg)';
+}
+
+function self() {
+  let b = document.getElementById("user-input").value;
+  document.getElementById("yours").innerHTML = document.getElementById("user-input").value;
+}
+function yellow() {
+  document.getElementById("yours").style.color = 'yellow';
+}
+function green() {
+  document.getElementById("yours").style.color = 'green';
+}
+function black() {
+  document.getElementById("yours").style.color = 'black';
+}
+function red() {
+  document.getElementById("yours").style.color = 'red';
+}
+function white() {
+  document.getElementById("yours").style.color = 'white';
+}
+function yellow() {
+  document.getElementById("yours").style.color = 'yellow';
+}
+function purple() {
+  document.getElementById("yours").style.color = 'purple';
+}
+function cyan() {
+  document.getElementById("yours").style.color = 'cyan';
+}
+function pink() {
+  document.getElementById("yours").style.color = 'pink';
+}
+function orange() {
+  document.getElementById("yours").style.color = 'orange';
+}
+function grey() {
+  document.getElementById("yours").style.color = 'grey';
+}
+function bold() {
+
+  document.getElementById("yours").classList.toggle('bolder');
+}
+function italic() {
+  document.getElementById("yours").classList.toggle('italic');
+}
+function font1() {
+
+  document.getElementById("yours").classList.toggle('font1');
+}
+function font2() {
+  document.getElementById("yours").classList.toggle('font2');
+}
+function font3() {
+
+  document.getElementById("yours").classList.toggle('font3');
+}
+function font4() {
+  document.getElementById("yours").classList.toggle('font4');
+}
+
+function clickon() {
+  document.getElementById("yours").style.fontSize = document.getElementById("siz").value;
+  document.getElementById("yours").style.lineHeight = document.getElementById("hei").value;
+  document.getElementById("yours").style.letterSpacing = document.getElementById("spa").value;
+}
+
+
+
+
+function printing() {
+  var doc = new jsPDF();
+  var pdf = document.getElementById('yours');
+  doc.fromHTML(pdf);
+  doc.save("Quote.pdf");
+}; 
+	</script>
+</body>
+
+</html>
